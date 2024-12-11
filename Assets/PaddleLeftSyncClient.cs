@@ -28,6 +28,7 @@ public class PaddleLeftSyncClient : MonoBehaviour
             string json = tokens[1];
 
             Debug.Log("NEWVALUE PADLE LEFT -->>> is ::  "+ tokens[1]);
+            Debug.Log("VAleur position-->>> is  ::  "+ tokens[1]);
 
             PaddleLeftState state = JsonUtility.FromJson<PaddleLeftState>(json);
 
