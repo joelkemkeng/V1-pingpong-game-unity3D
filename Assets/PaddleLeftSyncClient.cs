@@ -4,6 +4,8 @@ using UnityEngine;
 public class PaddleLeftSyncClient : MonoBehaviour
 {
 
+
+    public string ObjectId;
     UDPService UDP;
 
     void Awake()
@@ -27,8 +29,11 @@ public class PaddleLeftSyncClient : MonoBehaviour
             string[] tokens = message.Split('|');
             string json = tokens[1];
 
-            Debug.Log("NEWVALUE PADLE LEFT -->>> is ::  "+ tokens[1]);
-            Debug.Log("VAleur position-->>> is  ::  "+ tokens[1]);
+            
+            Debug.Log("++++++++++++++++++++++ CLIENT ++++ ID OBJECT-->>> is  ::  "+ ObjectId);
+            Debug.Log("NEWVALUE PADLE LEFT CLIENT -->>> is ::  "+ tokens[1]);
+            Debug.Log("++++++++++++++++++++++");
+           
 
             PaddleLeftState state = JsonUtility.FromJson<PaddleLeftState>(json);
 
