@@ -25,9 +25,9 @@ public class ClientManager : MonoBehaviour
         ServerEndpoint = new IPEndPoint(IPAddress.Parse(ServerIP), ServerPort);
             
         UDP.OnMessageReceived += (string message, IPEndPoint sender) => {
-            Debug.Log("[CLIENT] Message received from " + 
+           /* Debug.Log("[CLIENT] Message received from " + 
                 sender.Address.ToString() + ":" + sender.Port 
-                + " =>" + message);
+                + " =>" + message);*/
         };
     }
 
