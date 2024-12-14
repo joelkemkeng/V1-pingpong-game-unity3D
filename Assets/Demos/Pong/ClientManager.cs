@@ -4,7 +4,7 @@ using UnityEngine;
 public class ClientManager : MonoBehaviour
 {
     public UDPService UDP;
-    public string ServerIP = "127.0.0.1";
+    public string ServerIP = "192.168.190.123";
     public int ServerPort = 25000;
 
     private float NextCoucouTimeout = -1;
@@ -25,9 +25,9 @@ public class ClientManager : MonoBehaviour
         ServerEndpoint = new IPEndPoint(IPAddress.Parse(ServerIP), ServerPort);
             
         UDP.OnMessageReceived += (string message, IPEndPoint sender) => {
-           /* Debug.Log("[CLIENT] Message received from " + 
+            Debug.Log("[CLIENT] Message received from " + 
                 sender.Address.ToString() + ":" + sender.Port 
-                + " =>" + message);*/
+                + " =>" + message);
         };
     }
 

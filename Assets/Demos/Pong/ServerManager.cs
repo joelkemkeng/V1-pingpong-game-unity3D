@@ -22,11 +22,9 @@ public class ServerManager : MonoBehaviour
 
         UDP.OnMessageReceived +=  
             (string message, IPEndPoint sender) => {
-                /*
                 Debug.Log("[SERVER] Message received from " + 
                     sender.Address.ToString() + ":" + sender.Port 
                     + " =>" + message);
-                */
                 
                 switch (message) {
                     case "coucou":
